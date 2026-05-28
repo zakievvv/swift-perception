@@ -9,6 +9,10 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Observation)
+  import Observation
+#endif
+
 @_spi(SwiftUI)
 public struct PerceptionTracking: Sendable {
   enum Id {

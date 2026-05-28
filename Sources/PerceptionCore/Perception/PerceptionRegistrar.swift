@@ -1,9 +1,11 @@
 public import IssueReporting
 
+#if canImport(Observation)
+  public import Observation
+#endif
 #if canImport(SwiftUI)
   import SwiftUI
 #endif
-
 #if DEBUG && canImport(SwiftUI)
   import MachO
 #endif
