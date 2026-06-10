@@ -81,6 +81,15 @@
     }
   }
 
+  // Mirror the availability annotations on the `Bindable` struct itself
+  // so Swift 6.4 (Xcode 27) accepts these extensions when the package is
+  // compiled against a deployment target where the type is obsoleted.
+  // Without these, builds fail with errors like:
+  //   "'Bindable' is unavailable in watchOS: Use @Bindable without the 'Perception.' prefix."
+  @available(iOS, introduced: 13, obsoleted: 17)
+  @available(macOS, introduced: 10.15, obsoleted: 14)
+  @available(tvOS, introduced: 13, obsoleted: 17)
+  @available(watchOS, introduced: 6, obsoleted: 10)
   @available(visionOS, unavailable)
   extension Bindable: Identifiable where Value: Identifiable {
     public var id: Value.ID {
@@ -88,6 +97,10 @@
     }
   }
 
+  @available(iOS, introduced: 13, obsoleted: 17)
+  @available(macOS, introduced: 10.15, obsoleted: 14)
+  @available(tvOS, introduced: 13, obsoleted: 17)
+  @available(watchOS, introduced: 6, obsoleted: 10)
   @available(visionOS, unavailable)
   extension Bindable: Sendable where Value: Sendable {}
 
