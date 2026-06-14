@@ -1,3 +1,31 @@
+> ## FlowPulse-owned fork
+>
+> This is **not** the upstream `pointfreeco/swift-perception` repository.
+>
+> [@zakievvv](https://github.com/zakievvv) maintains this fork solely to
+> keep the [FlowPulse](https://github.com/zakievvv/FlowPulse) iOS / macOS /
+> watchOS / tvOS / visionOS app building under **Xcode 27 beta 1 +
+> Swift 6.4**, by patching a specific compile error that upstream's own
+> Xcode 27 PRs did not address.
+>
+> **Full rationale, verification, patch description, and retirement
+> conditions:** [https://github.com/zakievvv/swift-perception/issues/1](https://github.com/zakievvv/swift-perception/issues/1)
+>
+> The patch lives on branch
+> [`flowpulse-xcode-27-watchos-availability`](../../tree/flowpulse-xcode-27-watchos-availability) at commit
+> [`b6999579`](../../commit/b6999579186d020a8f3df9f9f62ef95a41ca8e01).
+>
+> FlowPulse consumes this fork transparently via SwiftPM mirror
+> configuration. If you found this repo by accident and you're not
+> working on FlowPulse, you almost certainly want **the upstream**:
+> [`pointfreeco/swift-perception`](https://github.com/pointfreeco/swift-perception).
+>
+> **No issues or PRs will be opened on `pointfreeco/swift-perception` as part of this
+> work** — this fork is a self-contained, `zakievvv/*`-scoped workaround,
+> not a fix that's being negotiated upstream.
+
+---
+
 # Perception
 
 [![CI](https://github.com/pointfreeco/swift-perception/actions/workflows/ci.yml/badge.svg)](https://github.com/pointfreeco/swift-perception/actions/workflows/ci.yml)
